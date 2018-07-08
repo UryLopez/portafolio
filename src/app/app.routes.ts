@@ -9,15 +9,15 @@ import { NgModule } from '@angular/core';
 
 
 const app_routes: Routes = [
-    { path: '', component: PortafolioComponent },
+    { path: 'home', component: PortafolioComponent },
     { path: 'about', component: AboutComponent },
     { path: 'producto', component: ProductoComponent },
     // { path: '**', component: 'home' },
 
     // { path: 'path/:routeParam', component: MyComponent },
     // { path: 'staticPath', component: ... },
-     { path: '**', component: 'portafolio' },
-    //  { path: 'oldPath', redirectTo: 'portafolio' },
+    // { path: '**', component: 'home' },
+     { path: '**', redirectTo: 'home' },
     // { path: ..., component: ..., data: { message: 'Custom' }
 ];
 
@@ -27,4 +27,4 @@ const app_routes: Routes = [
  })
  export class FeatureRoutingModule {}
 
-export const app_routing = RouterModule.forRoot(app_routes);
+export const app_routing = RouterModule.forRoot(app_routes, {useHash: true});
