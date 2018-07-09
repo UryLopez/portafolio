@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
 
   buscar_producto(termino: string) {
-    console.log(termino);
+    // console.log(termino);
     this._router.navigate( ['buscar', termino]);
   }
 
