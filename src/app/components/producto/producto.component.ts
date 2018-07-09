@@ -20,7 +20,7 @@ export class ProductoComponent implements OnInit {
        _ps.cargar_producto(parametros['id']).subscribe( res => {
          this.cod = parametros['id'];
         this.producto = res.json();
-      console.log( this.producto);
+        // console.log( this.producto);
        });
      });
    }
